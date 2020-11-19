@@ -5,7 +5,7 @@ const initialState = null;
 
 // The reducer are like bouncers at a club waiting for payloads from action
 // Once the right case of action comes, the reducer confirms the case and grabs the payload
-// Then the value of the reduxState changes
+// Then the value of the reduxState changes.
 
 
 export default function reducer(state = initialState, action) {

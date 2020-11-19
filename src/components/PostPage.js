@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchPost } from "../store/post/actions";
+import ReactMarkdown from "react-markdown";
 
 class PostPage extends React.Component {
   componentDidMount() {
@@ -19,14 +20,15 @@ class PostPage extends React.Component {
     return (
       <div>
         <h1>{post.title}</h1>
-        <p>{post.content}</p>
+        {/* <p>{post.content}</p> */}
+        <ReactMarkdown source={post.content} />
       </div>
     );
   }
 }
 function mapStateToProps(reduxState) {
   return {
-    post: reduxState.posts.data
+    post: reduxState.posts.data,
   };
 }
 export default connect(mapStateToProps)(PostPage);

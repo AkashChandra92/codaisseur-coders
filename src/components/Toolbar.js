@@ -14,6 +14,7 @@ const Toolbar = () => {
     >
       <Link to='/'>Homepage</Link>
       <Link to='/developers'>Developers List</Link>
+      <Link to='/login'>Log in</Link>
     </div>
   );
 };
